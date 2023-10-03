@@ -10,5 +10,5 @@ def uppercase(s):
     for c in s:
         if islower(c):
             c = chr(ord(c) - 32)
-        print(c, end='')
+        print('{}'.format(c), end='')
     print('')
