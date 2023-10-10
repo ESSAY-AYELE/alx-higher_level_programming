@@ -1,4 +1,4 @@
-#include "list.h"
+#include "lists.h"
 
 /**
  * is_palindrome - check a given linked list is palindrome or not
@@ -9,9 +9,9 @@ int is_palindrome(listint_t **head)
 {
 	listint_t *tmp = *head, *fast = *head, *slow = *head, *half = NULL;
 
-	if (head == NULL || *head->next == NULL || *head == NULL)
+	if (head == NULL || (*head)->next == NULL || *head == NULL)
 		return (0);
-	if (fast)
+	while (fast)
 	{
 		fast = fast->next->next;
 		if (!fast)
@@ -26,7 +26,7 @@ int is_palindrome(listint_t **head)
 		}
 		slow = slow->next;
 	}
-	reverse_list(*half);
+	revrse_list(&half);
 
 	while (tmp && half)
 	{
@@ -50,7 +50,7 @@ int is_palindrome(listint_t **head)
  */
 void revrse_list(listint_t **head)
 {
-	listint_t *prev = *NULL;
+	listint_t *prev = NULL;
 	listint_t *current = *head;
 	listint_t *next = NULL;
 
