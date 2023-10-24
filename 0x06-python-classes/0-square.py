@@ -3,7 +3,5 @@
 " just Empty class"""
 
 class Square:
-
     """ EMPTY class"""
-
    pass
