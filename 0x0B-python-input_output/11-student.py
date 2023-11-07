@@ -28,6 +28,7 @@ class Student:
                 return {key: getattr(self, key)
                         for key in atrrb if hasattr(self, key)}
         return self.__dict__
+
     def reload_from_json(self, json):
         """ set the attr form json"""
         for k, v in jsom.item():
