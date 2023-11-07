@@ -9,4 +9,4 @@ import json
 
 def to_json_string(my_obj):
     """ write a string to in json format"""
-    return (json.damps(my_obj))
+    return (json.dumps(my_obj))
