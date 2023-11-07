@@ -31,5 +31,5 @@ class Student:
 
     def reload_from_json(self, json):
         """ set the attr form json"""
-        for k, v in jsom.item():
+        for k, v in json.item():
             setattr(self, k, v)
