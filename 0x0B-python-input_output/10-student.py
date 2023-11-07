@@ -21,6 +21,10 @@ class Student:
         self.last_name = last_name
         self.age = age
 
-    def to_json(self):
+    def to_json(self, atrrb=None):
         """retireves a dictionary the instance"""
+        if (isinstance(atrrb, list)):
+            if all(isinstance(i, str) for i in atrrb):
+                return {key: getattr(self, key)
+                        for key in atrrb if hasattr(self, key)}
         return self.__dict__
