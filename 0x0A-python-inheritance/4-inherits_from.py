@@ -5,8 +5,10 @@
 
     Prototype: def inherits_from(obj, a_class):
     You are not allowed to import any module"""
+
+
 def inherits_from(obj, a_class):
     """ check the inheritance of an object from a class"""
-    if issubclass(type(obj), a_class) and type(obj) != a_class):
+    if issubclass(type(obj), a_class) and type(obj) is not a_class:
         return True
     return False
